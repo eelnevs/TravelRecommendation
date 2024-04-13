@@ -7,7 +7,7 @@ body {
 }
 
 html {
-    background-image: linear-gradient(to right, rgba(1, 50, 79, 0.85), rgba(150, 207, 228, 0.4)), url('BackgroundImg.png');
+    background-image: linear-gradient(to right, rgba(1, 50, 79, 0.85), rgba(150, 207, 228, 0.4)), url('../Images/BackgroundImg.png');
     background-size: auto;
     background-repeat: repeat, no-repeat;
 }
