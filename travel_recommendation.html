@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./travel_recommendation.css">
     <link rel="icon" type="image/x-icon" href="./Logo.png">
     <script src="https://kit.fontawesome.com/b605949882.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -15,9 +16,9 @@
             <label id="siteName">TravelExpress</label>
         </div>
         <div id="pages">
-            <a href="">Home</a>
-            <a href="">About Us</a>
-            <a href="">Contact Us</a>
+            <a href="#" id="homeBtn">Home</a>
+            <a href="#" id="aboutUsBtn">About Us</a>
+            <a href="#" id="contactUsBtn">Contact Us</a>
         </div>
         <div id="searchBar">
             <input placeholder="Enter a destination or keyword">
@@ -33,17 +34,14 @@
         <i class="fa-brands fa-twitter fa-2x"></i>
         <i class="fa-brands fa-facebook-f fa-2x"></i>
     </aside>
-    <div id="main-content">
-        <h1 id="intro-header">EXPORE<br>DREAM<br>DESTINATION</h1>
-        <p id="intro-description">Explore our handpicked array of destinations, insightful guides, and invaluable tips
-            tailored to inspire your next adventure.
-            Whether you're drawn to idyllic seascapes, rugged landscapes, or vibrant cityscapes,
-            TravelExpress offers the keys to unlock unforgettable experiences.
-            Trust us to guide you through the maze of travel choices, ensuring every moment of your expedition is filled
-            with wonder and excitement.
-            Start your expedition today and let TravelExpress be your compass to the world's wonders.</p>
-        <button id="bookBtn">BOOK NOW</button>
-    </div>
+    <div id="main-content"></div>
+    <script>
+        $(function(){
+            $("#main-content").load("home.html");
+        })
+    </script>
 </body>
+
+<script src="travel_recommendation.js"></script>
 
 </html>

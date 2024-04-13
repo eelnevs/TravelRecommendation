@@ -1,5 +1,5 @@
 * {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -129,14 +129,14 @@ button {
     justify-content: space-between;
 }
 
-#intro-header {
+.section-header {
     color: white;
     font-weight: bolder;
     font-size: 500%;
     text-shadow: 2px -2px 10px #10363a;
 }
 
-#intro-description {
+.section-content {
     color: white;
     font-size: 100%;
     line-height: 1.25;
