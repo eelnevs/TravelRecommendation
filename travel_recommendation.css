@@ -1,0 +1,158 @@
+* {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    background-image: linear-gradient(to right, rgba(1, 50, 79, 0.85), rgba(150, 207, 228, 0.4)), url('BackgroundImg.png');
+    background-size: auto;
+    background-repeat: repeat, no-repeat;
+}
+
+#logo {
+    width: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(8, 31, 44, 0.6);
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(85, 136, 155, 0.6));
+}
+
+.vertical-line {
+    top: 120px;
+    left: 42px;
+    position: absolute;
+    border-left: 3px solid white;
+    height: 300px;
+}
+
+#side-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
+    position: absolute;
+    top: 470px;
+    left: 30px;
+    color: white;
+}
+
+#side-nav i {
+    cursor: pointer;
+}
+
+#home {
+    align-items: center;
+    display: flex;
+    color: white;
+    cursor: pointer;
+}
+
+#siteName {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+#pages a {
+    margin-right: 50px;
+    color: white;
+    font-size: 30;
+    text-decoration: none;
+}
+
+#pages a:hover {
+    text-decoration: underline;
+}
+
+#searchBar {
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+    padding: 8px;
+    background-color: white;
+    align-items: center;
+    color: rgb(60, 147, 173);
+}
+
+#searchBar input {
+    width: 200px;
+    line-height: 1.2;
+    flex-grow: 2;
+    border: none;
+}
+
+#searchBar input::placeholder {
+    color: rgb(60, 147, 173);
+}
+
+#searchBar input:focus {
+    outline: none;
+}
+
+#searchBar:focus-within {
+    outline: 1px solid rgb(44, 151, 239);
+}
+
+button {
+    background: rgb(60, 147, 173);
+    color: white;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+#searchBar button {
+    border-radius: 8px;
+    padding: 7px 12px;
+    width: fit-content;
+    height: fit-content;
+}
+
+#searchBar button:hover {
+    text-decoration: underline;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin: 4% 5% 4% 10%;
+    justify-content: space-between;
+}
+
+#intro-header {
+    color: white;
+    font-weight: bolder;
+    font-size: 500%;
+    text-shadow: 2px -2px 10px #10363a;
+}
+
+#intro-description {
+    color: white;
+    font-size: 100%;
+    line-height: 1.25;
+    width: 500px;
+    text-align:justify;
+    text-shadow: 1px -2px 5px #135458;
+}
+
+#bookBtn {
+    margin-top: 3%;
+    padding: 12px 25px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+
