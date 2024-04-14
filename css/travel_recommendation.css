@@ -1,3 +1,13 @@
+:root {
+  --gradient-color: linear-gradient(
+    to right,
+    rgba(1, 50, 79, 0.85),
+    rgba(150, 207, 228, 0.4)
+  );
+  --background1: url("../Images/BackgroundImg.png");
+  --background2: url("../Images/BackgroundImg2.png");
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -7,14 +17,10 @@ body {
 }
 
 html {
-  background-image: linear-gradient(
-      to right,
-      rgba(1, 50, 79, 0.85),
-      rgba(150, 207, 228, 0.4)
-    ),
-    url("../Images/BackgroundImg.png");
-  background-size: auto;
-  background-repeat: repeat, no-repeat;
+  background-image: var(--gradient-color), var(--background1), var(--background2);
+  background-size: auto, auto, cover;
+  background-repeat: repeat, no-repeat, no-repeat;
+  animation: slideshow 15s alternate infinite;
 }
 
 h1 {
@@ -82,6 +88,7 @@ nav {
   color: white;
   font-size: 30;
   text-decoration: none;
+  text-wrap: nowrap;
 }
 
 #pages a:hover {
@@ -313,4 +320,28 @@ textarea {
 .small-description {
   text-align: left;
   font-size: 90%;
+  line-height: 1.4;
+}
+
+@keyframes slideshow {
+  0% {
+    background-size: auto, auto, cover;
+    background-blend-mode: normal, normal, normal;
+  }
+  49.5% {
+    background-blend-mode: normal, normal, normal;
+    background-size: auto, auto, cover;
+  }
+  50% {
+    background-blend-mode: normal, overlay, overlay;
+    background-size: auto, auto, cover;
+  }
+  50.5% {
+    background-blend-mode: normal, overlay, normal;
+    background-size: auto, 0 0, cover;
+  }
+  100% {
+    background-blend-mode: normal, normal, normal;
+    background-size: auto, 0 0, cover;
+  }
 }
