@@ -12,6 +12,10 @@ html {
     background-repeat: repeat, no-repeat;
 }
 
+h1 {
+    margin-block: 0.35em 0.35em;
+}
+
 #logo {
     width: 50px;
 }
@@ -52,7 +56,6 @@ nav {
     align-items: center;
     display: flex;
     color: white;
-    cursor: pointer;
 }
 
 #siteName {
@@ -108,6 +111,11 @@ button {
     height: 30px;
     cursor: pointer;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 12px 25px;
 }
 
 #searchBar button {
@@ -125,7 +133,7 @@ button {
     display: flex;
     flex-direction: column;
     height: fit-content;
-    margin: 4% 5% 4% 10%;
+    margin: 0% 5% 4% 10%;
     justify-content: space-between;
 }
 
@@ -134,25 +142,157 @@ button {
     font-weight: bolder;
     font-size: 500%;
     text-shadow: 2px -2px 10px #10363a;
+    text-transform: uppercase;
 }
 
 .section-content {
     color: white;
-    font-size: 100%;
+    font-size: 108%;
     line-height: 1.25;
-    width: 500px;
     text-align:justify;
-    text-shadow: 1px -2px 5px #135458;
+    text-shadow: 2px -3px 5px #135458;
+}
+
+.sub-header {
+    color: white;
+    font-weight: bolder;
+    font-size: 350%;
+    text-shadow: 2px -2px 10px #10363a;
+    text-transform: uppercase;
+    margin-left: 50px;
 }
 
 #bookBtn {
     margin-top: 3%;
-    padding: 12px 25px;
     width: fit-content;
     height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2px;
 }
 
+.card {
+    background-color: #13555894;
+    border: none;
+    padding: 10px 30px;
+    min-width: fit-content;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(67, 86, 86, 0.692);
+}
+
+.card-hover:hover {
+    box-shadow: 2px 5px 15px 4px rgba(67, 86, 86, 0.852);
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+
+.card-small {
+    width: 500px;
+    background-color: #13555894;
+    border: none;
+    padding: 0px 30px 20px 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(67, 86, 86, 0.692);
+}
+
+.margin-between {
+    margin: 15px 0;   
+}
+
+ul > li:first-child.margin-between {
+    margin: 0;
+}
+
+ul > li:last-child.margin-between {
+    margin: 0;
+}
+
+.margin-medium-top {
+    margin-top: 10px;
+}
+
+.margin-small-bottom {
+    margin-bottom: 5px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+ul.no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-header {
+    font-weight: bold;
+    font-style: italic;
+    min-width: 200px;
+    margin-left: 25px;
+    text-wrap: nowrap;
+}
+
+.list-body {
+    font-size: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-gap-small {
+    gap: 20px;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+.flex-horizontal {
+    flex-direction: row;
+}
+
+.flex-vertical {
+    flex-direction: column;
+}
+
+#team-members {
+    width: 80%;
+    gap: 50px;
+}
+
+.role-card {
+    text-align: center;
+    background-color: #3b6d97;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#contact-card {
+    height: 500px;
+    width: 75%;
+    padding: 20px 50px;
+}
+
+#contact-card input, textarea {
+    background-color: #10363a32;
+    border: 1px solid rgb(102, 157, 163);
+    line-height: 1.5;
+    font-size: 20;
+    color: white;
+    padding: 10px;
+}
+
+#contact-card textarea {
+    box-sizing: border-box;
+    height: 100%;
+    resize: none;
+}
+
+#contact-card button {
+    padding: 20px;
+    font-size: 108%;
+    line-height: 1.25;
+}

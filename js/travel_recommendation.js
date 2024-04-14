@@ -11,11 +11,22 @@ function fetchHTML(file) {
         })
 }
 
-document.querySelector('#homeBtn').addEventListener('click', () => fetchHTML('home.html'))
+function searchBar(enable) {
+    document.querySelector('#searchBar').style.visibility = enable;
+}
 
-document.querySelector('#aboutUsBtn').addEventListener('click', () => fetchHTML('about_us.html'))
-
-document.querySelector('#contactUsBtn').addEventListener('click', () => fetchHTML('contact_us.html'))
+document.querySelector('#homeBtn').addEventListener('click', () => {
+    fetchHTML('home.html');
+    searchBar('visible');
+});
+document.querySelector('#aboutUsBtn').addEventListener('click', () => {
+    fetchHTML('about_us.html');
+    searchBar('hidden');
+});
+document.querySelector('#contactUsBtn').addEventListener('click', () => {
+    fetchHTML('contact_us.html');
+    searchBar('hidden');
+});
 
 function bookButtonClick() {
     window.open("https://www.expedia.com/", '_blank').focus();

@@ -12,7 +12,9 @@
 <body>
     <nav>
         <div id="home">
-            <img src="./Images/Logo.png" id="logo">
+            <a href="index.html">
+                <img src="./Images/Logo.png" id="logo">
+            </a>
             <label id="siteName">TravelExpress</label>
         </div>
         <div id="pages">
@@ -36,7 +38,8 @@
     </aside>
     <div id="main-content"></div>
     <script>
-        $(function(){
+        // initial load home
+        $(function () {
             $("#main-content").load("home.html");
         })
     </script>
