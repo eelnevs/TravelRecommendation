@@ -16,6 +16,10 @@ h1 {
     margin-block: 0.35em 0.35em;
 }
 
+h4 {
+    margin-block: 1.2em 0.2em;
+}
+
 #logo {
     width: 50px;
 }
@@ -295,4 +299,9 @@ ul.no-bullets {
     padding: 20px;
     font-size: 108%;
     line-height: 1.25;
+}
+
+.small-description {
+    text-align: left;
+    font-size: 90%;
 }
