@@ -17,10 +17,12 @@ body {
 }
 
 html {
-  background-image: var(--gradient-color), var(--background1), var(--background2);
-  background-size: auto, auto, cover;
+  background-image: var(--gradient-color), var(--background1),
+    var(--background2);
+  background-size: auto, auto, contain;
   background-repeat: repeat, no-repeat, no-repeat;
-  animation: slideshow 15s alternate infinite;
+  background-attachment: fixed;
+  animation: slideshow 25s alternate infinite;
 }
 
 h1 {
@@ -135,7 +137,8 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  padding: 12px 25px;
+  padding: 12px 20px;
+  text-transform: uppercase;
 }
 
 #searchBar button {
@@ -143,6 +146,7 @@ button {
   padding: 7px 12px;
   width: fit-content;
   height: fit-content;
+  text-transform: capitalize;
 }
 
 #searchBar button:hover {
@@ -183,7 +187,7 @@ button {
 }
 
 #bookBtn {
-  margin-top: 3%;
+  margin-top: 4%;
   width: fit-content;
   height: fit-content;
 }
@@ -323,25 +327,75 @@ textarea {
   line-height: 1.4;
 }
 
+#recommendations {
+  margin: 3% 2% 0 0;
+  scrollbar-width: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d978f;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #09646b;
+}
+
+.destination-card {
+  border-radius: 10px;
+  width: 700px;
+  height: fit-content;
+  background-color: white;
+  color: black;
+}
+
+.destination-img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.destination-story {
+  margin: 15px;
+}
+
+.destination-description {
+  color: rgb(125, 111, 111);
+}
+
+.result-bar {
+  width: 100%;
+  min-height: 30px;
+  background-color: #26615b;
+  border-radius: 10px;
+}
+
 @keyframes slideshow {
   0% {
-    background-size: auto, auto, cover;
     background-blend-mode: normal, normal, normal;
+    background-size: auto, auto, auto;
   }
   49.5% {
     background-blend-mode: normal, normal, normal;
-    background-size: auto, auto, cover;
+    background-size: auto, auto, auto;
   }
   50% {
     background-blend-mode: normal, overlay, overlay;
-    background-size: auto, auto, cover;
+    background-size: auto, auto, auto;
   }
   50.5% {
     background-blend-mode: normal, overlay, normal;
-    background-size: auto, 0 0, cover;
+    background-size: auto, 0 0, auto;
   }
   100% {
     background-blend-mode: normal, normal, normal;
-    background-size: auto, 0 0, cover;
+    background-size: auto, 0 0, auto;
   }
 }
