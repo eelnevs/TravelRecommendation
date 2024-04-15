@@ -49,6 +49,7 @@ async function fetchRecommendations() {
 function setDestination(des) {
   const lastCard = document.querySelector("#recommendations").lastChild;
   lastCard.querySelector(".destination-name").textContent = des.name;
+  lastCard.querySelector(".destination-time").textContent = getTime(des.timeZone);
   if (des.notFound == 1) {
     lastCard.querySelector(".destination-img").src = "";
     lastCard.querySelector(".destination-visitBtn").style.display = "none";
@@ -127,8 +128,7 @@ function getTime(timeZone) {
     second: "numeric",
   };
   const localeTime = new Date().toLocaleTimeString("en-US", options);
-  console.log(`Current time in ${timeZone}:`, localeTime);
-  return `Current time: ${localeTime}`;
+  return `Local time: ${localeTime}`;
 }
 
 document.querySelector("#search").addEventListener("click", () => search());

@@ -366,6 +366,14 @@ textarea {
   margin: 15px;
 }
 
+.destination-name {
+  margin-bottom: 10px
+}
+
+.destination-time {
+  margin-top: 0px;
+}
+
 .destination-description {
   color: rgb(125, 111, 111);
 }
