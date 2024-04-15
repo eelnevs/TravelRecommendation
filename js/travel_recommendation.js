@@ -31,7 +31,8 @@ document.querySelector("#contactUsBtn").addEventListener("click", () => {
 });
 
 function bookButtonClick() {
-  window.open("https://www.expedia.com/", "_blank").focus();
+  loadMainContent("contact_us.html");
+  searchBar("hidden");
 }
 
 async function fetchRecommendations() {
