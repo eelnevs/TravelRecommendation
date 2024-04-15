@@ -36,7 +36,7 @@ function bookButtonClick() {
 
 async function fetchRecommendations() {
   try {
-    const response = await fetch("../data/travel_recommendation_api.json");
+    const response = await fetch("travel_recommendation_api.json");
     const result = await response.json();
     return result;
   } catch (error) {
