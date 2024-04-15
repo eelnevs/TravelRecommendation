@@ -106,9 +106,7 @@ async function search() {
     } else {
       if (find == "countries")
         showRecommendations(
-          destinations.countries.flatMap((x) => x.cities),
-          true
-        );
+          destinations.countries.flatMap((x) => x.cities));
       else showRecommendations(destinations[find]);
     }
   }
@@ -119,6 +117,7 @@ function clearSearch(resetKeyWord = true) {
   if (resetKeyWord) document.querySelector("#searchBar input").value = "";
 }
 
+/** @param {string} timeZone */
 function getTime(timeZone) {
   const options = {
     timeZone: timeZone,
